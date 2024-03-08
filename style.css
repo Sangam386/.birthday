@@ -1,0 +1,101 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(238, 144, 255);
+}
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 210px;
+  height: 300px;
+  /* Use an image tag to add your cover image here */
+  background-image: url(/VARNIKA.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-size: 97%;
+  box-shadow: 1px 1px 12px black;
+  transform: perspective(2000px) rotateX(0deg) rotateY(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .book:hover { 
+  transform: perspective(2000px) rotateX(15deg) rotateY(-10deg);
+ } */
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  background-image: linear-gradient(40deg, rgb(218, 1, 203), black);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px black;
+  box-shadow: 1px 1px 12px black;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-85deg);
+  -ms-transform: rotateY(-85deg);
+  transform: rotatey(-95deg);
+}
+
+.notes {
+  position: absolute;
+  color: #ff9595;
+  font-size: 30px;
+  top: 17px;
+  width: 200px;
+  text-align: center;
+  font-family: "Zeyada", sans-serif;
+  font-weight: 900;
+}
+.note {
+  position: absolute;
+  color: #ff9595;
+  font-size: 40px;
+  top: 107px;
+  left: 8px;
+  width: 200px;
+  text-align: center;
+  font-family: "Zeyada", sans-serif;
+  font-weight: 900;
+
+}
+.notes:before,
+.notes:after {
+  position: absolute;
+  left: 5px;
+  text-align: center;
+  width: 200px;
+}
+.notes:before {
+  content: "Birthday";
+  top: 30px;
+  color: #d04e4e;
+  font-family: "Zeyada", cursive;
+}
+.notes:after {
+  content: "day!";
+  top: 60px;
+  font-family: "Zeyada", sans-serif;
+}
+#img {
+  position: absolute;
+  top: 145px;
+  width: 60%;
+  height: 50%;
+  left: 20%;
+  mix-blend-mode: screen;
+}
